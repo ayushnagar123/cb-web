@@ -2,6 +2,13 @@ html{
     color: red;
     font-size: 50px;
 }
+/* psedu classes*/
+a:visited{
+    color:aqua;
+}
+a:hover{
+    color: fuchsia;
+}
 #p1{
     color: yellow;
 }

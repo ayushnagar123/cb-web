@@ -1,0 +1,13 @@
+.tr:hover{
+    border-top: 1px solid rgb(170, 170, 170);
+}
+.tr:nth-child(2n){
+    background-color: rgb(170, 170, 170);
+}
+.td{
+    text-align: center;
+}
+.table{
+    width: 400px;
+    height:200px;
+}

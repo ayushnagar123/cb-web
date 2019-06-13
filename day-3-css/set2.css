@@ -1,0 +1,18 @@
+#box{
+    width: 100px;
+    height: 100px;
+    background-color: skyblue;
+    margin: 10px; /* from all sides*/
+    margin: 10px 10px;/*top-bottom and left-right */
+    margin: 10px 10px 19px;
+    margin: 10px 10px 10px 10px;
+    padding:10px;
+    border: 10px solid red;/* border is inclusin=ve in calculation*/
+    display: inline-block !important;/* in same line*/
+    /* inline gives it size what you are entering in it*/
+}
+/* inline element ki width and hight 0px */
+/* element ke andar padding*/
+/* element ke bahar margin*/
+/* !important bang important no priority is concerned for this property*/
+/* conflicting rules ke case me sirf property jo clash ho rahi unke case me check hoga warna jo ho raha us selector ke lie hota rahega */
