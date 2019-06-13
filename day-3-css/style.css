@@ -1,0 +1,50 @@
+html{
+    color: red;
+    font-size: 50px;
+}
+#p1{
+    color: yellow;
+}
+#p2{
+    color: orange;
+}
+.item{
+    color:purple;
+}
+/* id have preference over class */
+#html{
+    color: darkcyan;
+}
+/* select all */
+* {
+    color: brown;
+}
+/* Styling using attibute values */
+input[type="password"]{
+    border:5px solid red;
+}
+/* child property:- direct child*/
+ol > li{
+    color: saddlebrown;
+}
+ul > ul >li{
+    color: silver;
+}
+p.Hello{
+    color: gold;
+}
+div > p{
+    color: palegreen;
+}
+/* space combinator li:- any subtree child*/
+ul li{
+    border: 5px solid orange;
+}
+p{
+    font-size: 1rem;     
+    /* px selects give the size to m letter which has max width in all letters*/
+    /* em multi[ple of default size of m*/
+    /* relative to html element */
+    color:green;
+    font-family: Arial, Helvetica, sans-serif;  /* sans-serif is not a font-family it is type of font which tells browser to select its default font of sans-serif type*/
+}
