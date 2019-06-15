@@ -1,0 +1,28 @@
+/* scale center se change hoga */
+/* height width top left corner se */
+div{
+    height:100px;
+    width:100px;
+    border:2px solid blue;
+    margin: 20px;
+    transition:2s;
+    background-color: green;
+    -webkit-transition:2s;
+    -moz-transition:2s;
+    -ms-transition:2s;
+    -o-transition:2s;
+}
+#div1:hover{
+    transform: scale(2);
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
+}
+#div2:hover{
+    background-color: red;
+}
+#div3:hover{
+    width: 300px;
+    border: 10px dashed red;
+}
