@@ -1,0 +1,18 @@
+div p{
+    color: red;
+}
+p{
+    color:blue;
+}
+div span{
+    color:green;
+}
+div > span{
+    color: purple;
+}
+div + p.add{
+    color: orange;
+}
+div ~ p{
+    color: skyblue
+}
