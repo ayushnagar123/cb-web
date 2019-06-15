@@ -1,0 +1,62 @@
+div {
+    border: solid red;
+    width: 140px;
+    height: 60px;
+    margin:50px;
+}
+#i1{
+    transform: translate(30px,20px);
+    -webkit-transform: translate(30px,20px);
+    -moz-transform: translate(30px,20px);
+    -ms-transform: translate(30px,20px);
+    -o-transform: translate(30px,20px);
+}
+#i2{
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+#i3{
+    transform: rotate(45rad);
+    -webkit-transform: rotate(45rad);
+    -moz-transform: rotate(45rad);
+    -ms-transform: rotate(45rad);
+    -o-transform: rotate(45rad);
+}
+#i4{
+    transform: rotate(45grad);
+    -webkit-transform: rotate(45grad);
+    -moz-transform: rotate(45grad);
+    -ms-transform: rotate(45grad);
+    -o-transform: rotate(45grad);
+}
+#i5{
+    transform: translateX(2em) translateY(3em) translateZ(3em);
+    -webkit-transform: translateX(2em) translateY(3em) translateZ(3em);
+    -moz-transform: translateX(2em) translateY(3em) translateZ(3em);
+    -ms-transform: translateX(2em) translateY(3em) translateZ(3em);
+    -o-transform: translateX(2em) translateY(3em) translateZ(3em);
+}
+#i6{
+    transform: scale(2,0.5);
+    -webkit-transform: scale(2,0.5);
+    -moz-transform: scale(2,0.5);
+    -ms-transform: scale(2,0.5);
+    -o-transform: scale(2,0.5);
+}
+#i7{
+    transform: rotate(0.4turn);
+    -webkit-transform: rotate(0.4turn);
+    -moz-transform: rotate(0.4turn);
+    -ms-transform: rotate(0.4turn);
+    -o-transform: rotate(0.4turn);
+}
+#i8{
+    transform: skew(10deg);
+    -webkit-transform: skew(10deg);
+    -moz-transform: skew(10deg);
+    -ms-transform: skew(10deg);
+    -o-transform: skew(10deg);
+}
