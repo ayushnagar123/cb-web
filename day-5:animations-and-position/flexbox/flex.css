@@ -1,0 +1,17 @@
+.container{
+    height:500px;
+    width:800px;
+    background-color: aquamarine;
+    border: 2px solid black;
+    margin:1px;
+    display:flex;
+    flex-direction: row-reverse;
+    flex-wrap:wrap-reverse;
+}
+.item{
+    height:20px;
+    width:80px;
+    background-color: red;
+    border: 2px solid black;
+    margin:2px;
+}

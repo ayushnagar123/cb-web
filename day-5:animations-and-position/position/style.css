@@ -1,0 +1,30 @@
+div{
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    margin: 20px;
+    border:2px solid black;
+}
+/* absolute is with respect to document*/
+#d3{
+    position: absolute;
+    bottom:10px;
+    right:10px;
+}
+
+#d6{
+    position:relative;
+    left:10px;
+}
+/* fixed is fixed to the screen*/
+#d1{
+    position:fixed;
+    top:10px;
+    right:10px;
+}
+/* it doesnot allow to voilate the given constraingt of top/bottom/right/left*/
+#d10{
+    position:sticky;
+    top:320px;
+}
+/* static is used as the parameters are defined*/
