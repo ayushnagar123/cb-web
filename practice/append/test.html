@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style>
+		.margin_row{
+			margin: 2em;
+		}
+		tr{
+    		border-top: 1px solid rgb(170, 170, 170);
+		}
+		/* tr:nth-child(2n){
+			background-color: rgb(170, 170, 170);
+		} */
+		td{
+			text-align: center;
+		}
+		table{
+			border-collapse: collapse;
+		}
+	</style>
+</head>
+<body class="container-fluid">
+	<h2 style="text-align: center;">Search Leads</h2>
+		<div class="form-row margin_row">
+			<div class="col-md-4"><label>Product Catagory</label>
+				<select id="prodcat" class="custom-select" multiple>
+				  <!-- <option selected>Product Catagory</option> -->
+				  <option value="1">One</option>
+				  <option value="2">Two</option>
+				  <option value="3">Three</option>
+				</select>
+			</div>
+			<div class="col-md-4"><label>Product</label>
+				<select id="prod" class="custom-select" multiple>
+				  <!-- <option selected>Product</option> -->
+				  <option value="1">One</option>
+				  <option value="2">Two</option>
+				  <option value="3">Three</option>
+				</select>
+			</div>
+			<div class="col-md-4"><label>City Area</label>
+				<select id="city" class="custom-select" multiple>
+				  <!-- <option selected>City Area</option> -->
+				  <option value="1">One</option>
+				  <option value="2">Two</option>
+				  <option value="3">Three</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-row margin_row">
+			<div class="col-md-4"><label>Assigned to</label>
+				<select id="assign" class="custom-select" multiple>
+				  <!-- <option selected>Assigned to</option> -->
+				  <option value="1">One</option>
+				  <option value="2">Two</option>
+				  <option value="3">Three</option>
+				</select>
+			</div>
+			<div class="col-md-4"><label>Lead Source</label>
+				<select id="lead" class="custom-select" multiple>
+				  <!-- <option selected>Lead Source</option> -->
+				  <option value="1">One</option>
+				  <option value="2">Two</option>
+				  <option value="3">Three</option>
+				</select>
+			</div>
+			<div class="col-md-4"><label>Status</label>
+				<select id="status" class="custom-select" multiple>
+				  <!-- <option selected>Status</option> -->
+				  <option value="1">One</option>
+				  <option value="2">Two</option>
+				  <option value="3">Three</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-row margin_row">
+			<div class="col-md-4"><label>Name</label>
+				<input id="name" class="form-control" type="text" placeholder="Name">
+			</div>
+			<div class="col-md-4"><label>Intro Email</label>
+				<input id="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+			</div>
+			<div class="col-md-4"><label>Intro Call</label>
+				<input id="call" class="form-control" type="text" placeholder="Intro Call">
+			</div>
+		</div>
+		<div class="form-row margin_row">
+			<div class="col-md-4">
+				<div class="row">
+					<div class="col-md-3">
+						<input id="add" class="btn btn-primary" type="submit" value="Submit">
+					</div>
+					<div class="col-md-3">
+						<input class="btn btn-primary" type="reset" value="Clear">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+			</div>
+			<div class="col-md-4">
+			</div>
+		</div>
+		<div class="col-md-12">
+			<button>Delete</button>
+			<table cellpadding="20">
+				<tbody id="list">
+				<tr>
+					<th>Name</th>
+					<th>Mobile</th>
+					<th>product</th>
+					<th>City Area</th>
+					<th>Status</th>
+					<th>Lead Source</th>
+					<th>User</th>
+					<th>Intro Call</th>
+					<th>Intro Email</th>
+					<th>Quote</th>
+					<th>Date Created</th>
+					<th colspan="2">Description</th>
+					<th colspan="2">Status Description</th>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<script>
+			let name=document.getElementById("name")
+			let email=document.getElementById("email")
+			let call=document.getElementById("call")
+			let list=document.getElementById("list")
+			let prod=document.getElementById("prod")
+			let city=document.getElementById("city")
+			let status=document.getElementById("status")
+			let lead=document.getElementById("lead")
+			
+			function getSelectedOption(sel) {
+				var opt;
+				for ( var i = 0, len = sel.options.length; i < len; i++ ) {
+					opt = sel.options[i];
+					if ( opt.selected === true ) {
+						break;
+					}
+				}
+				return opt;
+			}
+			let add=document.getElementById("add")
+			add.onclick=function(){
+				
+				let item =document.createElement("tr")
+				list.appendChild(item)
+				
+				let nm =document.createElement("td")
+				nm.textContent=name.value
+				item.appendChild(nm)
+				
+				let mob =document.createElement("td")
+				mob.textContent="000000000"
+				item.appendChild(mob)
+				// let pc=document.createElement("td")
+				// pc.textContent=prodcat.value
+				// item.appendChild(pc)
+				var opt = getSelectedOption(prod);
+        		prod.value = opt.value;
+				
+				let p=document.createElement("td")
+				p.textContent=prod.value
+				item.appendChild(p)
+				opt = getSelectedOption(city);
+        		city.value = opt.value;
+				
+				let c=document.createElement("td")
+				c.textContent=city.value
+				item.appendChild(c)
+				
+				var opt = getSelectedOption(status);
+        		status.value = opt.value;
+				
+				let s=document.createElement("td")
+				s.textContent=status.value
+				item.appendChild(s)
+				opt = getSelectedOption(lead);
+        		lead.value = opt.value;
+				
+				let l=document.createElement("td")
+				l.textContent=lead.value
+				item.appendChild(l)
+				
+				let user =document.createElement("td")
+				user.textContent="ABC"
+				item.appendChild(user)
+				
+				let em =document.createElement("td")
+				em.textContent=email.value
+				item.appendChild(em)
+				
+				let cl =document.createElement("td")
+				cl.textContent=call.value
+				item.appendChild(cl)
+				
+				let quote =document.createElement("td")
+				quote.textContent="bla bla"
+				item.appendChild(quote)
+				
+				let dateTime =document.createElement("td")
+				let today = new Date();
+				let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+				let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+				dateTime.value = date+' '+time;
+				item.appendChild(dateTime)
+
+				let desc =document.createElement("td")
+				desc.textContent="bla bla"
+				item.appendChild(desc)
+				desc.setAttribute("colspan","2")
+				
+				let std =document.createElement("td")
+				std.textContent="bla bla"
+				item.appendChild(std)
+				std.setAttribute("colspan","2")
+
+				
+			}
+
+		</script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
