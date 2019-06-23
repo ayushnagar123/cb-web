@@ -6,11 +6,15 @@
 */
 /*
 */
-const Band={
+const Person={
     name:'Not Defined',
-    songs: [],
-    getNoOfSongs: function(){
-        return this.songs.length
+    interests: [],
+    getNoOfInterests: function(){
+        return this.interests.length
     }
 }
-const b1=Object.create(Band)
+// const Ayush={
+//     name:'Ayush Nagar',
+
+// }
+const Ayush=Object.create(Person)

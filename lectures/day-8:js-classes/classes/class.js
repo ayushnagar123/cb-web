@@ -12,6 +12,7 @@ b1.prototype is not defined
 2. Band.prototype is not prototype of Band
 3. function ka prototype and __proto__ dono honge
 4. objects ka __proto__ hoga
+<x>.__proto is not prototype of <x>
 */
 const Band=function(name,songs){
     this.name = name
