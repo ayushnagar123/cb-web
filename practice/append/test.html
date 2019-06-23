@@ -207,7 +207,10 @@
 				let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 				let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 				dateTime.value = date+' '+time;
+				dateTime.innerText=dateTime.value
+				console.log(dateTime.value)
 				item.appendChild(dateTime)
+				
 
 				let desc =document.createElement("td")
 				desc.textContent="bla bla"

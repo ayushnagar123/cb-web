@@ -1,0 +1,5 @@
+let name=document.getElementById("name")
+let age=document.getElementById("age")
+let address=document.getElementById("address")
+let course=document.getElementById("course")
+let type=document.getElementsByName("type")
