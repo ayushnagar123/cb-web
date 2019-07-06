@@ -4,6 +4,12 @@ var app = express()
 app.get('/200',(req,res)=>{
     res.sendStatus(200)     //Ok
 })
+app.get('/201',(req,res)=>{
+    res.sendStatus(201)     //Created
+})
+app.get('/204',(req,res)=>{
+    res.sendStatus(204)     //No Content
+})
 app.get('/300',(req,res)=>{
     res.sendStatus(300)     //Multiple Choices
 })
@@ -27,6 +33,12 @@ app.get('/403',(req,res)=>{
 })
 app.get('/404',(req,res)=>{
     res.sendStatus(404)     //Not Found
+})
+app.get('/409',(req,res)=>{
+    res.sendStatus(409)     //Conflict
+})
+app.get('/500',(req,res)=>{
+    res.sendStatus(500)     //Internal Server Error
 })
 app.get('/501',(req,res)=>{
     res.sendStatus(501)     //Not Implemented
