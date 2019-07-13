@@ -1,8 +1,12 @@
 $(()=>{
     $('#add').click(()=>{
         console.log('add clicked 1')
+        $('#users').append(
+            `<li>${$('#name').val()}</li>`)
     })
-    $('button.todo').click(()=>{
-        console.log('add clicked 2')
+    $('#userform').submit((e)=>{
+        e.preventDefault()
+        console.log('submitted')
+        console.log(e)
     })
 })
