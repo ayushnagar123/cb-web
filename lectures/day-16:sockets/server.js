@@ -7,8 +7,21 @@ const server = http.createServer(app)
 
 const io = socket(server)
 
-io.on('connection',(xyz)=>{
-    console.log('connection established',xyz.id)
+io.on('connection',(socket)=>{
+    console.log('connection established',socket.id)
+    // xyz.emit('connected')
+    
+    // xyz.on('disconnect',()=>{
+    //     console.log('Disconnected',xyz.id)
+    // })
+
+    socket.on('send_chat',(data)=>{
+        console.log('data recieved',data.message)
+
+        io.emit("recieve_chat",{
+            message: data.message
+        })
+    })
 })
 
 app.use('/',express.static(__dirname+'/frontend'))
