@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ayushnagar123/cb-web/issues"
   },
-  "homepage": "https://github.com/ayushnagar123/cb-web#readme"
+  "homepage": "https://github.com/ayushnagar123/cb-web#readme",
+  "dependencies": {
+    "mongodb": "^3.2.7"
+  }
 }
