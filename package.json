@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ayushnagar123/cb-web#readme",
   "dependencies": {
-    "mongodb": "^3.2.7"
+    "mongodb": "^3.2.7",
+    "pad-left": "^2.1.0"
   }
 }

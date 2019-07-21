@@ -6,9 +6,10 @@
 var obj={
     a: 2,
     x:{
-        name: 'ayush'
-    }
+        name: 'ayush',
+    },
     flag: true,
+}
 // VM1193:6 Uncaught SyntaxError: Unexpected identifier
 var obj={
     a: 2,
@@ -17,14 +18,14 @@ var obj={
     },
     flag: true,
 }
-undefined
+// undefined
 obj.a
-2
+// 2
 obj.x
-{name: "ayush"}
+// {name: "ayush"}
 obj.__proto__
-{constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
+// {constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
 obj.x.name
-"ayush"
+// "ayush"
 delete obj
-true
+// true

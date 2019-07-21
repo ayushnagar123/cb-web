@@ -34,7 +34,7 @@ passport.use(
       callbackURL: 'http://localhost:8787/login/facebook/callback',
     },
     (accessToken,refreshToken,profile,done)=>{
-      Users.findCreateFind({
+      Users.create({
         username: profile.id,
         fbAccessToken: accessToken,
         
